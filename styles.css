@@ -53,7 +53,8 @@ html {
     width: 90%;
     max-width: 1200px;
     border-radius: 50px;
-    z-index: 1000;
+    z-index: 9999;
+    /* Highest priority */
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     height: auto;
     border: 1px solid rgba(255, 255, 255, 0.5);
@@ -965,6 +966,9 @@ html {
     .nav-side.nav-left {
         flex-grow: 1;
         /* Pushes content to the right */
+        display: flex;
+        justify-content: flex-start;
+        /* Force Left Alignment */
     }
 
     .nav-side.nav-right {
@@ -974,15 +978,21 @@ html {
 
     .logo {
         margin: 0;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        /* Ensure logo container aligns left */
     }
 
     .logo img {
         height: 35px;
         /* Smaller height for mobile */
         width: auto;
-        transform: scale(2.8);
+        transform: scale(2.5);
         /* Reset scale for mobile/tablet */
         margin: 0;
+        margin-left: -60px;
+        /* Slight nudge to align with edge padding if needed */
     }
 
     .mobile-menu-btn {
@@ -1063,7 +1073,7 @@ html {
         margin-left: 0;
         /* Reset desktop negative margin */
         width: 100%;
-        padding-top: 70px;
+        padding-top: 100px;
     }
 
     .hero-image {
@@ -1158,6 +1168,11 @@ html {
 
     .hero-text h2 {
         font-size: 24px;
+    }
+
+    .hero-text {
+        padding-left: 0;
+        padding-right: 0;
     }
 
     .form-row {
