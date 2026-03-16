@@ -35,6 +35,10 @@ html {
     scroll-behavior: smooth;
 }
 
+::-webkit-scrollbar {
+  display: none;
+}
+
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -1271,7 +1275,7 @@ html {
         margin-left: 0;
         /* Reset desktop negative margin */
         width: 100%;
-        padding-top: 100px;
+        padding-top: 125px;
     }
 
     .hero-image {
@@ -1287,7 +1291,7 @@ html {
         max-width: 400px;
         height: auto;
         margin-right: 40px;
-        transform: scale(1.15);
+        transform: scale(1.15) translateX(-10px);
         /* Offset to center off-center original image content */
     }
 
@@ -1534,7 +1538,7 @@ html {
 
 @media (max-width: 768px) {
     .decor-join-giraffe {
-        right: -15px;
+        right: 70px;
         width: 120px;
         bottom: -65px;
     }
